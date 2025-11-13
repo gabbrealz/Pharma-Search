@@ -1,0 +1,13 @@
+Each bytepos pickle file contains the following python object:
+
+[
+    <byte position to drug entry 1>, 
+    <byte position to drug entry 2>, 
+    <byte position to drug entry 3>,
+    ...
+]
+
+Each pickle file contains a list of byte positions of where the drug entry begins for a specific file in drug_data
+
+0-bytepos.pkl to 6-bytepos.pkl refers to the otc drug files
+10-bytepos.pkl to 18-bytepos.pkl refers to the prescription drug files
