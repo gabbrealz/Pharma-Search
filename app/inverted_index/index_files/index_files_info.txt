@@ -1,0 +1,23 @@
+TF = term frequency = the number of times that a token appears in an entry
+
+Each pickle file contains the following python object:
+
+{
+    "<token that starts with a specific letter>": (
+        (unique_fileindex, array.array('H', [<index1>, <TF for index1>, <index2>, <TF for index2>, ...])),
+        (unique_fileindex, array.array('H', [<index1>, <TF for index1>, <index2>, <TF for index2>, ...])),
+        ...
+    ),
+    ...
+}
+
+The file name of the pickle file tells about the tokens it contains.
+    - A-part1.pkl contains tokens that start with A, and the second letter is within the range A-M
+    - A-part2.pkl contains tokens that start with A, and the second letter is within the range N-Z
+
+Each pickle file contains a dictionary, wherein tokens are keys, and values are a tuple.
+    - Each tuple value contains:
+        - The unique_fileindex used to tell which files to look for
+        - An array.array('H') of indexes to the byte position of the entries. 
+            - (see general_functionality/bytepos_files/bytepos_files_info.txt)
+        - After each index in array.array('H'), it is followed by the term frequency for that particular entry

@@ -1,0 +1,11 @@
+Each pickle file contains the following python object:
+
+{
+    "<token that starts with a specific letter>": IDF,
+    "<token that starts with a specific letter>": IDF,
+    ...
+}
+
+IDF = Inverse document frequency = A measure of how important a token is across the entire data set
+
+Each pickle file's name tells what tokens it contains. A-IDF.pkl contains only tokens that start with the letter A
