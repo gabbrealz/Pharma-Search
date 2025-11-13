@@ -1,0 +1,6 @@
+*-saves/
+*_drugs/
+*.json
+build/
+__pycache__/
+.vscode/
