@@ -1,5 +1,5 @@
 *-saves/
-*_drugs/
+*drug_data/
 *.json
 build/
 __pycache__/
